@@ -1,0 +1,49 @@
+função velha():
+    """
+    Esta função desenha um jogo da velha
+    com 300px.
+    """
+    
+    defina_direcao(0)
+    pular_para(0, 200)
+    repetir 4 vezes:
+        frente(300)
+        pu()
+        esquerda(90)
+        frente(100)
+        esquerda(90)
+        frente(100)
+        esquerda(90)
+        pd()
+        
+função xis(casa):
+    """
+    Desenha um X na casa especificada.
+    
+    As casas do jogo da velha sao definidas pela
+    convenção
+    
+        1 | 2 | 3
+       ---+---+---
+        4 | 5 | 6
+       ---+---+---
+        7 | 8 | 9
+    """
+    if casa == 1:
+        pular_para(50, 250)
+    xis_aqui(100)
+    
+função xis_aqui(lado):
+    """
+    Desenha um x na posição atual.
+    """
+    defina_direcao(45)
+    frente(lado/2)
+    tras(lado)
+    frente(lado/2)
+    esquerda(90)
+    frente(lado/2)
+    tras(lado)
+
+velha()
+xis(1)
