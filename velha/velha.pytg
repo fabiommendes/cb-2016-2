@@ -3,6 +3,7 @@ coordenadas = [
     (50, 150), (150, 150), (250, 150),
     (50, 50),  (150, 50),  (250, 50),
 ]
+preenchidas = [Falso] * 9
 
 função velha():
     """
@@ -59,10 +60,15 @@ função leia_casa():
     """
     
     valor = leia_texto('Qual casa? ')
+    se valor == 'sair':
+        retornar 0
     se valor.e_digito():
         valor = int(valor)
-        se 1 <= valor <= 9:
-            retornar valor
+        se valor == 0:
+            retornar 0
+        ou se 0 <= valor <= 9:
+            se preenchidas[valor - 1] == Falso:
+                retornar valor
     alerta("Digite um valor correto")
     retornar leia_casa()
 
@@ -70,4 +76,7 @@ função leia_casa():
 velha()
 repetir 9 vezes: 
     casa = leia_casa()
+    se casa == 0:
+        quebrar
     xis(casa)
+    preenchidas[casa - 1] = Verdadeiro
