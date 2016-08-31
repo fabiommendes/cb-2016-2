@@ -37,9 +37,7 @@ função xis(casa):
     """
     
     ponto = coordenadas[casa - 1]
-    x = ponto[0]
-    y = ponto[1]
-    pular_para(x, y)
+    pular_para(ponto)
     xis_aqui(100)
     
 função xis_aqui(lado):
@@ -53,7 +51,23 @@ função xis_aqui(lado):
     esquerda(90)
     frente(lado/2)
     tras(lado)
+    
+    
+função leia_casa():
+    """
+    Lê uma casa válida.
+    """
+    
+    valor = leia_texto('Qual casa? ')
+    se valor.e_digito():
+        valor = int(valor)
+        se 1 <= valor <= 9:
+            retornar valor
+    alerta("Digite um valor correto")
+    retornar leia_casa()
 
 # Inicia o jogo da velha
 velha()
-xis(9)
+repetir 9 vezes: 
+    casa = leia_casa()
+    xis(casa)
