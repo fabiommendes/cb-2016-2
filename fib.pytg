@@ -1,0 +1,34 @@
+função fibrec(n):
+    """
+    Retorna o n-ésimo Fibonacci.
+    """
+    
+    se n <= 1:
+        retorne 1
+    senão:
+        retorne fibrec(n - 1) + fibrec(n - 2) 
+       
+    
+função fib(n):
+    """
+    Retorna o n-ésimo Fibonacci.
+    """
+    
+    x, y = 1, 1
+    repetir n vezes:
+        x, y = y, x + y
+    retornar x
+    
+    
+#
+# Analisa o tempo de execução
+#
+from time import time
+
+t0 = time()
+fib(35)
+mostre('fib:', time() - t0)
+
+t0 = time()
+fibrec(35)
+mostre('fibrec:', time() - t0)

@@ -1,0 +1,12 @@
+função fibo(n):
+    """
+    Retorna o n-ésimo # de Fibonacci.
+    """
+    x = y = 1 
+    repetir n - 1 vezes: 
+        x, y = y, x + y
+    retornar y
+    
+função main():    
+    para cada n de 0 até 20:
+        mostre(fibo(n))

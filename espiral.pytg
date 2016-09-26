@@ -1,0 +1,7 @@
+passo = 1
+
+repetir 10 vezes:
+    mostre(passo)
+    frente(passo)
+    esquerda(120)
+    passo = passo + passo

@@ -1,0 +1,15 @@
+from game_of_life import*
+
+board = Board(42,42)
+
+para cada i de 12 até 26:
+    k = int(i - 9)
+    j = int(k**2/10- 2*k) 
+    if j <=42:
+        board[i + 2, -j+ 15] = 1
+
+para cada i de 13 até 15:
+    board[ 16  , i] =1
+    board[ 26 , i] =1
+ 
+run('conway')
