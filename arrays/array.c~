@@ -1,19 +1,5 @@
 #include<stdio.h>
-
-/**
- * Imprime um array de 'size' inteiros.
- */
-void print_ints(int L[], int size) {
-    int i;
-    printf("[");
-    for (i = 0; i < size - 1; i++) {
-        printf("%d, ", L[i]);
-    }
-    if (size != 0) {
-        printf("%d", L[size - 1]);
-    }
-    printf("]\n");
-}
+#include "array_util.h"
 
 int main(void) {
     int fibo_list[10];

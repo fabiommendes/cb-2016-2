@@ -1,5 +1,6 @@
 #include<stdio.h>
-#include "array_util.h"
+
+
 
 int main(void) {
     int fibo_list[10];
