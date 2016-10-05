@@ -1,0 +1,21 @@
+função cesar(texto, n):
+    """
+    Implementa a cifra de César.
+    """
+    saida = []
+    para cada c em texto:
+        x = ord(c)
+        se ord('a') <= x <= ord('z'):
+            x = x + n
+            x_dif = x - ord('a')
+            x_new = x_dif % 26 + ord('a')
+            c =  chr(x_new)
+        saida.append(c)
+        
+    sep = ""
+    retornar sep.join(saida)
+    
+    
+mostre(cesar("ave cesar!", 20))
+mostre(cesar("upy wymul!", -20))
+
