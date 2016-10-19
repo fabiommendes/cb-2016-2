@@ -24,7 +24,7 @@ int main(void) {
     for (int i=0; i < N; i++) {
         total += renda[i];
     }
-    printf("renda media: %lf\n", total / N);
+    printf("renda media: %.2lf\n", total / N);
 }
 
 
