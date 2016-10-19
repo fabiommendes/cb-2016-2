@@ -5,8 +5,15 @@
  */
 void cesar(char* texto, int n) {
     char saida[1000];
+    char x;
     
-    for (c em texto??) {
+    
+    for (int i = 0; i < 1000; i++) {
+        x = texto[i];
+        if ('a' <= x && x <= 'z') {
+            x = x + 1;
+        }
+    /*
         x = ord(c);
         if (ord('a') <= x <= ord('z')) {
             x = x + n
@@ -14,9 +21,10 @@ void cesar(char* texto, int n) {
             x_new = x_dif % 26 + ord('a')
             c =  chr(x_new)
         }
-        saida.append(c)
+    */
+        saida[i] = x;
     }    
-    printf(saida);
+    puts(saida);
 }
     
     
