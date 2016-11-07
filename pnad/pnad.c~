@@ -25,6 +25,20 @@ int main(void) {
         total += renda[i];
     }
     printf("renda media: %.2lf\n", total / N);
+    
+    // Menor e maior rendas
+    int menor = 100000;
+    int maior = 0;
+    for (int i=0; i < N; i++) {
+        if (renda[i] < menor && renda[i] > 2) {
+            menor = renda[i];    
+        }
+        if (renda[i] > maior) {
+            maior = renda[i];
+        }
+    }
+    printf("menor renda: %d\n", menor);
+    printf("maior renda: %d\n", maior);
 }
 
 

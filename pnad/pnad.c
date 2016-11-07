@@ -30,7 +30,7 @@ int main(void) {
     int menor = 100000;
     int maior = 0;
     for (int i=0; i < N; i++) {
-        if (renda[i] < menor && renda[i] != 0) {
+        if (renda[i] < menor && renda[i] > 0) {
             menor = renda[i];    
         }
         if (renda[i] > maior) {
