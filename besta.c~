@@ -45,7 +45,6 @@ int main(void) {
     }
     
     // Duplas de palavras
-    /*
     for (int i=0; i<10; i++) {
         for (int j=i; j<10; j++) {
             valor = nums[i] + nums[j];
@@ -54,7 +53,7 @@ int main(void) {
                 printf("%d %d -> %d\n", i, j, valor);
             }
         }
-    }*/
+    }
     
     // Trincas de palavras
     for (int i=0; i<10; i++) {
