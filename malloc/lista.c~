@@ -1,18 +1,27 @@
 #include<stdio.h>
 #include<stdlib.h>
 
+
 double* push(double *ptr, int size, double elem) {
     if (size == 0) {
         ptr = malloc(sizeof(double));
         ptr[0] = elem;
         return ptr;
     } else {
+        // Aloca espaco para size + 1 elementos
         double *novo = malloc(sizeof(double) * (size + 1));
+        
+        // Copia valores para a nova região de memória
         for (int i=0; i < size; i++) {
             novo[i] = ptr[i];
         }
+        
+        // Acrescenta último elemento
         novo[size] = elem;
+        
+        // Libera antiga região de memória
         free(ptr);
+        
         return novo;
     }
 }
