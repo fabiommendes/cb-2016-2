@@ -18,20 +18,18 @@ void printPessoa(Pessoa);
  */
 Pessoa novaPessoa() {
     Pessoa p;
+    p.genero = 2;
+    p.raca = 1;
+    p.edu = 5;
+    p.renda = rand() % 10001;
     return p;
 }  
 
 
 // Programa principal
 int main(void) {
-    Pessoa p = {
-        .genero=1, 
-        .raca=3, 
-        .edu=10, 
-        .renda=1000
-    };
-    
-    printPessoa(p);
+    srand(2);
+    printPessoa(novaPessoa());
 }
 
 
@@ -40,7 +38,7 @@ int main(void) {
  */
 void printPessoa(Pessoa p) {
     char genero;
-    char raca[5][10] = {"preto", "pardo", "branco", "amarelo", "indigena", "???"};
+    char raca[6][10] = {"preto", "pardo", "branco", "amarelo", "indigena", "???"};
     int idx = p.raca - 1;
     if (idx < 0 || idx > 4) {
         idx = 5;

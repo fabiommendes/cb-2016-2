@@ -18,20 +18,19 @@ void printPessoa(Pessoa);
  */
 Pessoa novaPessoa() {
     Pessoa p;
+    p.genero = 2;
+    p.raca = 1;
+    p.edu = 5;
+    p.renda = rand() % 10001;
     return p;
 }  
 
 
 // Programa principal
 int main(void) {
-    Pessoa p = {
-        .genero=1, 
-        .raca=3, 
-        .edu=10, 
-        .renda=1000
-    };
-    
-    printPessoa(p);
+    time_t t;
+    srand((unsigned) time(&t));
+    printPessoa(novaPessoa());
 }
 
 
