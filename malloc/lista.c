@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 
 double* push(double *ptr, int size, double elem) {
@@ -43,7 +44,12 @@ double media(double *ptr, int size) {
  * elementos
  */
 double desvpad(double *ptr, int size) {
-    // ...
+    double S = 0;
+    double med = media(ptr, size);
+    for (int i=0; i < size; i++) {
+        S += (ptr[i] - med) * (ptr[i] - med);
+    }
+    return sqrt(S / (size - 1));
 }
 
 int main(void) {
@@ -61,4 +67,6 @@ int main(void) {
     } 
     
     printf("media: %lf\n", media(lista_ptr, size));
+    printf("desvpad: %lf\n", desvpad(lista_ptr, size));
+    printf("desvpad media: %lf\n", desvpad(lista_ptr, size) / sqrt(size));
 }
