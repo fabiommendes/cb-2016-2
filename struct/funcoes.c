@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<stdlib.h>
 
 
 typedef struct Pessoa {
@@ -8,30 +7,6 @@ typedef struct Pessoa {
     int edu;
     int renda;
 } Pessoa;
-
-
-// protótipos
-void printPessoa(Pessoa);
-
-/**
- Cria um novo objeto do tipo pessoa com valores aleatórios
- */
-Pessoa novaPessoa() {
-    Pessoa p;
-    p.genero = rand() % 5 + 1;
-    p.raca = rand() % 2 + 1;
-    p.edu = rand() % 16;
-    p.renda = rand() % 10001;
-    return p;
-}  
-
-
-// Programa principal
-int main(void) {
-    time_t t;
-    srand((unsigned) time(&t));
-    printPessoa(novaPessoa());
-}
 
 
 /**
@@ -56,3 +31,20 @@ void printPessoa(Pessoa p) {
     
     printf("renda=%d, edu=%d (%c, %s)\n", p.renda, p.edu, genero, raca[idx]);
 }
+
+
+/**
+ Cria um novo objeto do tipo pessoa com valores aleatórios
+ */
+Pessoa novaPessoa() {
+    Pessoa p;
+    p.genero = rand() % 5 + 1;
+    p.raca = rand() % 2 + 1;
+    p.edu = rand() % 16;
+    p.renda = rand() % 10001;
+    return p;
+     
+   Pessoa *p;
+   (*p).genero = 1;
+   p->genero = 1;
+}  

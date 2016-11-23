@@ -18,11 +18,17 @@ void printPessoa(Pessoa);
  */
 Pessoa novaPessoa() {
     Pessoa p;
-    p.genero = 2;
-    p.raca = 1;
-    p.edu = 5;
+    p.genero = rand() % 5 + 1;
+    p.raca = rand() % 2 + 1;
+    p.edu = rand() % 16;
     p.renda = rand() % 10001;
     return p;
+    
+    
+    
+   Pessoa *p;
+   (*p).genero = 1;
+   p->genero = 1;
 }  
 
 
